@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>3animacje</title>
+    <style> 
+        body { 
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .zwierze {
+            position: relative;
+            width: 200px;
+            height: 200px;
+        }
+        .swinka .cialo, .sowa .cialo, .mis .cialo {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            position: relative;
+        }
+        .swinka .cialo {
+            background-color: pink;
+        }
+        .sowa .cialo, .mis .cialo {
+            background-color: brown;
+        }
+        .ucho, .oko, .powieka, .reka, .dziób, .nos, .ryjek, .nozdrze, .pyszczek {
+            position: absolute;
+        }
+        .ucho, .oko, .zrenica, .reka, .dziób, .nos, .ryjek, .nozdrze, .pyszczek {
+            border-radius: 50%;
+        }
+        .ucho {
+            width: 50px;
+            height: 50px;
+            top: -25px;
+            background-color: inherit;
+        }
+        .ucho.lewe { left: 20px; }
+        .ucho.prawe { right: 20px; }
+        .oko {
+            width: 20px;
+            height: 20px;
+            top: 50px;
+            background-color: black;
+        }
+        .oko.lewe { left: 60px; }
+        .oko.prawe { right: 60px; }
+        .powieka {
+            width: 40px;
+            height: 20px;
+            top: 0;
+            left: 0;
+            background-color: brown;
+        }
+        .zrenica {
+            width: 20px;
+            height: 20px;
+            top: 10px;
+            left: 10px;
+            background-color: black;
+        }
+        .dziób {
+            width: 30px;
+            height: 40px;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            background-color: orange;
+        }
+        .ryjek {
+            width: 80px;
+            height: 60px;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: pink;
+        }
+        .nozdrze {
+            width: 10px;
+            height: 15px;
+            top: 20px;
+            background-color: black;
+        }
+        .nozdrze.lewe { left: 20px; }
+        .nozdrze.prawe { right: 20px; }
+        .pyszczek {
+            width: 50px;
+            height: 20px;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: black;
+        }
+        .reka {
+            width: 60px;
+            height: 20px;
+            top: 120px;
+            background-color: brown;
+        }
+        .reka.lewa {
+            left: -40px;
+            transform-origin: 60px 10px;
+        }
+        .reka.prawa {
+            right: -40px;
+        }
+        .nos {
+            width: 30px;
+            height: 20px;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="zwierze swinka">
+        <div class="cialo"></div>
+        <div class="ucho lewe"></div>
+        <div class="ucho prawe"></div>
+        <div class="oko lewe"></div>
+        <div class="oko prawe"></div>
+        <div class="ryjek">
+            <div class="nozdrze lewe"></div>
+            <div class="nozdrze prawe"></div>
+            <div class="pyszczek"></div>
+        </div>
+    </div>
+    <div class="zwierze sowa">
+        <div class="cialo"></div>
+        <div class="oko lewe">
+            <div class="powieka lewe"></div>
+            <div class="zrenica"></div>
+        </div>
+        <div class="oko prawe">
+            <div class="powieka prawe"></div>
+            <div class="zrenica"></div>
+        </div>
+        <div class="dziób"></div>
+    </div>
+    <div class="zwierze mis">
+        <div class="cialo"></div>
+        <div class="ucho lewe"></div>
+        <div class="ucho prawe"></div>
+        <div class="oko lewe"></div>
+        <div class="oko prawe"></div>
+        <div class="nos"></div>
+        <div class="reka lewa"></div>
+        <div class="reka prawa"></div>
+    </div>
+    <script src="animacja1.js"></script>
+</body>
+</html>
